@@ -1,0 +1,27 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.8",
+    "httpx>=0.28.1",
+    "ipdb>=0.13.13",
+    "ruff>=0.9.4",
+    "openai>=1.61.1",
+    "pydantic>=2.10.6",
+    "burr[start]>=0.38.0",
+    "uvicorn>=0.34.0",
+    "polars>=1.21.0",
+    "datasets>=3.2.0",
+    "sqlmodel>=0.0.22",
+    "instructor>=1.7.2",
+]
+
+
+[tool.ruff]
+line-length = 90
+
+[tool.ruff.lint]
+extend-select = ["I"]

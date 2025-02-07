@@ -4,7 +4,7 @@
 
 * Add your `OPENAI_API_KEY` to .env.
 * Ensure docker and docker compose installed.
-* Run:
+* Run (apologies frontend image takes a while to build:
 
 ```
 > make start

@@ -20,7 +20,7 @@
 * The user is prompted for input
 * The default response is a song recommendation (the current implementation does not support general chat, so each response will be a recommendation)
 * The user can continue to provide feedback or clarify their feelings and preferences to receive updated recommendations
-* If the user enters "play" after a recommendation, they will be redirected to the song on Spotify
+* If the user enters "play" after a recommendation, they will be redirected to the song on Spotify (if this step fails please refresh the page and start the chat again)
 
 ## Implementation Details
 

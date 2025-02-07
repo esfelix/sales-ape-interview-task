@@ -28,7 +28,7 @@
   - The recommendations use the audio features of each track
   - Originally planned to retrieve the user's next recommended tracks as input, but the audio features Spotify endpoint has been deprecated
   - Instead used a [`Hugging Face dataset`](./backend/src/spotify/spotify_tracks_top_10000.csv) with track audio features, with the data stored in [SQLite DB](./backend/src/spotify/tables.py)
-  - For each round of recommendations, this DB is [randomly sampled](./backend/src/api/routers/chat.py#L32) for 30 tracks which are used as the candidates to be passed to the prompt
+  - For each round of recommendations, this DB is [randomly sampled](./backend/src/api/routes/chat.py#L32) for 30 tracks which are used as the candidates to be passed to the prompt
 
 * Burr State Machine
   - The agent itself is implemented using the [Burr library](https://burr.dagworks.io/)
@@ -37,7 +37,7 @@
     - [Burr app](./backend/src/ai/state_machine.py): defines the actions (nodes) and possible transitions
 
 * Chat Endpoint
-  - All chat requests go via [this endpoint](./backend/src/api/routers/chat.py#L30)
+  - All chat requests go via [this endpoint](./backend/src/api/routes/chat.py#L30)
   - Manages control flow of state machine, yielding back to client for user input
   - Returns one of a number of events for the client to process (websocket would be better here, see below)
 
